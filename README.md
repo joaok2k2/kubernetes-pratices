@@ -1,2 +1,2 @@
 # kubernetes-pratices
-Learning Kubernetes
+Learning Kubernetes a lot!
