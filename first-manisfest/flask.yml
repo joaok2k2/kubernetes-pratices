@@ -1,0 +1,26 @@
+# Versão do recurso
+apiVersion: apps/v1
+
+# O tipo de execução
+kind: Deployment
+# O nome do  deployment
+metadata:
+  name: flask-app-deployment
+
+# Especificações do deployment, aplicativo.
+spec:
+  # Numeros de replicas
+  replicas: 5
+  # Associando ao aplicativo
+  selector:
+    matchLabels:
+      app: flask-app
+  # O template que vai ser rodado
+  template:
+    metadata:
+      labels:
+        app: flask-app
+    spec:
+      containers:
+        - name: flask
+          image: joaosilvadev/first-deployment:3
